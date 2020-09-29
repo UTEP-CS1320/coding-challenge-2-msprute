@@ -30,5 +30,5 @@ int main(void) {
       printf("Stage 2 Hypertension\n");
   }
   else
-    printf("Error\n");
+    printf("ERROR\n");
 }
