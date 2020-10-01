@@ -24,12 +24,12 @@ int main(void) {
       printf("Normal\n");
     else if ((s >= 120 && s <= 129) && d < 80)
       printf("Elevated\n");
-    else if ((s >= 130 && s <= 139) && (d >= 80 && d <= 89))
+    else if ((s >= 130 && s < 140) || (d > 80 && d <= 89))
       printf("Stage 1 Hypertension\n");
-    // Here I've had to put the last case before Stage 2 since it was conflicting with some of the outputs.
+    // Here I've had to put the last case before Stage 2 so that certain cases would run this loop first without interfering with stage 2.
     else if (s >= 180 || d >= 120)
       printf("Hypertensive Crysis\n");
-    // Here I've had to add a couple ranges although it's not included in the chart so that the proper cases would be outputted
+    // Here I've had to add a couple ranges although it's not included in the chart so that the proper cases would be outputted.
     else if ((s >= 140 && s < 180) || (d >= 90 && d < 120))
       printf("Stage 2 Hypertension\n");
   }
